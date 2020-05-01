@@ -34,6 +34,7 @@ function formsubmit()
     var radio = document.getElementsByName("active");
     var select = document.getElementById("category").value;
     var date = document.getElementById("dateOfRelease").value;
+    var rating = document.getElementById("check1").value;
     var count=0;
     if(item=="")
     {
@@ -42,6 +43,7 @@ function formsubmit()
         document.getElementById("date-error").innerHTML = "";
         document.getElementById("radio-error").innerHTML="";
         document.getElementById("select-error").innerHTML = "";
+        document.getElementById("rating-error").innerHTML = "";
         document.getElementById("moviename").focus();
         return false;
     }
@@ -52,6 +54,7 @@ function formsubmit()
         document.getElementById("date-error").innerHTML = "";
         document.getElementById("radio-error").innerHTML="";
         document.getElementById("select-error").innerHTML = "";
+        document.getElementById("rating-error").innerHTML = "";
         document.getElementById("moviename").focus();
         return false;
     }
@@ -62,6 +65,7 @@ function formsubmit()
         document.getElementById("radio-error").innerHTML="";
         document.getElementById("select-error").innerHTML = "";
         document.getElementById("movie-error").innerHTML = "";
+        document.getElementById("rating-error").innerHTML = "";
         document.getElementById("earning").focus();
         return false;
     }
@@ -72,6 +76,7 @@ function formsubmit()
         document.getElementById("date-error").innerHTML = "";
         document.getElementById("radio-error").innerHTML="";
         document.getElementById("select-error").innerHTML = "";
+        document.getElementById("rating-error").innerHTML = "";
         document.getElementById("earning").focus();
         return false;
     }
@@ -82,6 +87,7 @@ function formsubmit()
         document.getElementById("earning-error").innerHTML = "";
         document.getElementById("radio-error").innerHTML="";
         document.getElementById("select-error").innerHTML = "";
+        document.getElementById("rating-error").innerHTML = "";
         document.getElementById("dateOfRelease").focus();
         return false;
     }
@@ -92,6 +98,7 @@ function formsubmit()
         document.getElementById("date-error").innerHTML = "";
         document.getElementById("earning-error").innerHTML = "";
         document.getElementById("radio-error").innerHTML="";
+        document.getElementById("rating-error").innerHTML = "";
         document.getElementById("category").focus();
         return false;
     }
@@ -111,6 +118,18 @@ function formsubmit()
         document.getElementById("select-error").innerHTML = "";
         document.getElementById("earning-error").innerHTML = "";
         document.getElementById("date-error").innerHTML = "";
+        document.getElementById("rating-error").innerHTML = "";
+        return false;
+    }
+    else if(rating<1 || rating>10)
+    {
+        document.getElementById("rating-error").innerHTML = "Rating should be between 1 and 10";
+        document.getElementById("earning-error").innerHTML = "";
+        document.getElementById("date-error").innerHTML = "";
+        document.getElementById("radio-error").innerHTML="";
+        document.getElementById("select-error").innerHTML = "";
+        document.getElementById("movie-error").innerHTML = "";
+        document.getElementById("check1").focus();
         return false;
     }
     else
